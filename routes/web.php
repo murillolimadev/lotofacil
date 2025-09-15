@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard;
+use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\LotofacilController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/dashboard', [Dashboard::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.index');
 
 Route::get('/', function () {
@@ -28,9 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/lotofacil/store', [LotofacilController::class, 'store'])->name('admin.lotofacil.store');
     Route::get('/lotofacil/destroy/{id}', [LotofacilController::class, 'destroy'])->name('lotofacil.destroy');
     // gera numbers
-    Route::get('/gerar', [Gera::class, 'index'])->name('lotofacil.index');
 
-
+    // result
+    Route::post('/lotofacil/result/store', [ResultController::class, 'store'])->name('admin.lotofacil.result.store');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

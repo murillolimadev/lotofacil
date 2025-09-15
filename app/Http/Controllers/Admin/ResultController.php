@@ -3,22 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Lotofacil;
-use App\Models\Result;
-
 use Illuminate\Http\Request;
 
-class Dashboard extends Controller
+class ResultController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $result =  Result::orderBy('created_at', 'desc')->first();
-        $data = Lotofacil::latest()->orderBy('created_at', 'desc')->get();
-        $result = Result::latest()->orderBy('created_at', 'desc')->first();
-        return view('admin.pages.index', compact('data', 'result'));
+        //
     }
 
     /**
@@ -34,7 +28,7 @@ class Dashboard extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

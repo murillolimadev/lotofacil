@@ -13,7 +13,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a data-bs-toggle="collapse" href="" data-toggle="modal" data-target="#exampleModal">
+        <a data-bs-toggle="collapse" href="" data-toggle="modal" data-target="#result">
             <i class="fas fa-layer-group"></i>
             <p>Resultados</p>
             {{-- <span class="caret"></span> --}}

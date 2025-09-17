@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Lotofacil;
 use App\Models\Result;
 use Illuminate\Http\Request;
 
-class ResultController extends Controller
+class Resultcontrollerr extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data =  Result::orderBy('created_at', 'desc')->first();
+        return view('admin.pages.result.index',compact('data'));
     }
 
     /**
@@ -28,13 +31,14 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       Result::create($request->all());
+       return redirect()->back()->with('msg', 'Salvo com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Result $result)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +46,7 @@ class ResultController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Result $result)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +54,7 @@ class ResultController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Result $result)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +62,7 @@ class ResultController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Result $result)
+    public function destroy(string $id)
     {
         //
     }

@@ -17,7 +17,6 @@ class Dashboard extends Controller
     {
         $result =  Result::orderBy('created_at', 'desc')->first();
         $data = Lotofacil::latest()->orderBy('created_at', 'desc')->get();
-        $result = Result::latest()->orderBy('created_at', 'desc')->first();
         return view('admin.pages.index', compact('data', 'result'));
     }
 

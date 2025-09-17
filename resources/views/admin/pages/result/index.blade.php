@@ -125,14 +125,14 @@
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                         <div>
-                            <h3 class="fw-bold mb-3">Dashboard</h3>
-                            <h6 class="op-7 mb-2">Registro de jogos lotofácil</h6>
+                            <h3 class="fw-bold mb-3">Resultados</h3>
+                            <h6 class="op-7 mb-2">Registrar novo resultado</h6>
                         </div>
                         <div class="ms-md-auto py-2 py-md-0">
                             <button type="button" class="btn btn-primary btn-round" data-toggle="modal"
                                 data-target="#gerar">Gerador</button>
                             <button type="button" class="btn btn-primary btn-round" data-toggle="modal"
-                                data-target="#exampleModal">Novo jogo</button>
+                                data-target="#result">Novo</button>
                         </div>
 
                         {{-- modal create --}}
@@ -396,220 +396,30 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col" style="width: 50px">#</th>
-                                                        <th scope="col">Acertos</th>
+                                                        <th scope="col">Números</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            {{ $data->id }}
+                                                        </td>
 
-                                                    @foreach ($data as $item)
-                                                        <tr>
-                                                            <td>
-                                                                {{ $item->id }}
-                                                            </td>
+                                                        <td>
+                                                            <button
+                                                                class="btn btn-sm btn-success">{{ $data->n01 }}</button>
+                                                            <button
+                                                                class="btn btn-sm btn-success">{{ $data->n02 }}</button>
+                                                            <button
+                                                                class="btn btn-sm btn-success">{{ $data->n03 }}</button>
+                                                            <button
+                                                                class="btn btn-sm btn-success">{{ $data->n04 }}</button>
+                                                            <button
+                                                                class="btn btn-sm btn-success">{{ $data->n05 }}</button>
 
-                                                            <td>
-                                                                @if ($item->n01 == $result->n01)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n01 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n01 }}</button>
-                                                                @endif
 
-                                                                @if ($item->n02 == $result->n02)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n02 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n02 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n03 == $result->n03)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n03 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n03 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n04 == $result->n04)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n04 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n04 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n05 == $result->n05)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n05 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n05 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n06 == $result->n06)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n07 == $result->n07)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n07 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n07 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n08 == $result->n08)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n08 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n08 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n09 == $result->n09)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n09 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n09 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n10 == $result->n10)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n10 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n10 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n11 == $result->n11)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n11 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n11 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n12 == $result->n12)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n12 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n12 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n13 == $result->n13)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n13 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n13 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n14 == $result->n14)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n14 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n14 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n15 == $result->n15)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n15 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n15 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n16 == $result->n16)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n16 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n16 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n17 == $result->n17)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n17 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n17 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n18 == $result->n18)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n18 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n18 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n19 == $result->n19)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n19 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n19 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n20 == $result->n20)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n20 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n20 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n21 == $result->n21)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n21 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n21 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n22 == $result->n22)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n22 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n22 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n23 == $result->n23)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n23 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n23 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n24 == $result->n24)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n24 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n24 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n25 == $result->n25)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n25 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n25 }}</button>
-                                                                @endif
-                                                            </td>
-                                                        </tr>
-                                                    @endforeach
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
 

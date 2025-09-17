@@ -6,6 +6,13 @@
         <h4 class="text-section">menu</h4>
     </li>
     <li class="nav-item">
+        <a href="{{ route('dashboard.index') }}">
+            <i class="fas fa-desktop"></i>
+            <p>Home</p>
+            {{-- <span class="caret"></span> --}}
+        </a>
+    </li>
+    <li class="nav-item">
         <a data-bs-toggle="collapse" href="" data-toggle="modal" data-target="#exampleModal">
             <i class="fas fa-layer-group"></i>
             <p>Novo jogo</p>
@@ -13,7 +20,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a data-bs-toggle="collapse" href="" data-toggle="modal" data-target="#result">
+        <a href="{{ route('admin.lotofacil.result.index') }}">
             <i class="fas fa-layer-group"></i>
             <p>Resultados</p>
             {{-- <span class="caret"></span> --}}

@@ -64,6 +64,7 @@ class Resultcontrollerr extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Result::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

@@ -34,6 +34,7 @@ class LotofacilController extends Controller
     public function store(Request $request)
     {
         Lotofacil::create([
+            'cod' => $request->cod,
             'n01' => $request->n01,
             'n02' => $request->n02,
             'n03' => $request->n03,
@@ -90,8 +91,9 @@ class LotofacilController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Lotofacil $lotofacil)
+    public function destroy($id)
     {
-        //
+        Lotofacil::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

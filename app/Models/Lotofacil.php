@@ -10,6 +10,7 @@ class Lotofacil extends Model
     use HasFactory;
 
     protected $fillable = [
+        'cod',
         'n01',
         'n02',
         'n03',

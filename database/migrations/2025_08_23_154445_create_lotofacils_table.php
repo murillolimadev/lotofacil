@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('lotofacils', function (Blueprint $table) {
             $table->id();
+            $table->string('cod')->nullable();
             $table->string('n01')->nullable();
             $table->string('n02')->nullable();
             $table->string('n03')->nullable();

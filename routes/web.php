@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Admin\Resultcontrollerr;
+use App\Http\Controllers\ConcursoController;
 use App\Http\Controllers\LotofacilController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    //concursos
+    Route::get('/concurso', [ConcursoController::class, 'index'])->name('admin.lotofacil.concurso.index');
+    Route::post('/lotofacil/concurso/store', [ConcursoController::class, 'store'])->name('admin.pages.concurso.store');
+    Route::get('/concurso/destroy/{id}', [ConcursoController::class, 'destroy'])->name('admin.pages.concurso.destroy');
 
     //insert
     Route::get('/lotofacil', [LotofacilController::class, 'index'])->name('lotofacil.index');
@@ -34,6 +39,7 @@ Route::middleware('auth')->group(function () {
     // result
     Route::get('/lotofacil/result', [Resultcontrollerr::class, 'index'])->name('admin.lotofacil.result.index');
     Route::post('lotofacil/result/store', [Resultcontrollerr::class, 'store'])->name('admin.lotofacil.result.store');
+    Route::get('/lotofacil/result/destroy/{id}', [Resultcontrollerr::class, 'destroy'])->name('lotofacil.result.destroy');
 });
 
 require __DIR__ . '/auth.php';

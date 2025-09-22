@@ -1,24 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Lotofacil;
-use App\Models\Result;
-
+use App\Models\Concurso;
 use Illuminate\Http\Request;
 
-class Dashboard extends Controller
+class ConcursoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $result =  Result::orderBy('created_at', 'desc')->first();
-        $data = Lotofacil::latest()->orderBy('created_at', 'desc')->get();
-       
-        return view('admin.pages.index', compact('data', 'result'));
+        $data = Concurso::latest()->get();
+        return view('admin.pages.concurso.index', compact('data'));
     }
 
     /**
@@ -34,13 +29,14 @@ class Dashboard extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Concurso::create($request->all());
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Concurso $concurso)
     {
         //
     }
@@ -48,7 +44,7 @@ class Dashboard extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Concurso $concurso)
     {
         //
     }
@@ -56,7 +52,7 @@ class Dashboard extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Concurso $concurso)
     {
         //
     }
@@ -64,8 +60,9 @@ class Dashboard extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        Concurso::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

@@ -28,7 +28,18 @@
             },
         });
     </script>
-
+    <style>
+        .cicle {
+            float: left;
+            margin-left: 2px;
+            margin-top: 2px;
+            padding: 5px;
+            background-color: grey;
+            border-radius:5%;
+            width: 50px;
+            height:30px;
+        }
+    </style>
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/css/plugins.min.css') }}" />
@@ -81,7 +92,7 @@
     <!-- Kaiadmin JS -->
     <script src="{{ asset('admin/js/kaiadmin.min.js') }}"></script>
 
-   
+
 
     {{-- modal --}}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

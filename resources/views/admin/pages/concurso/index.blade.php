@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
-@section('title', 'Resultado')
+@section('title', 'Concursos')
 @section('content')
     <div class="wrapper">
         <!-- Sidebar -->
@@ -8,7 +8,7 @@
                 <!-- Logo Header -->
                 <div class="logo-header" data-background-color="dark">
                     <a href="index.html" class="logo" style="color: #FFF">
-                        LOTOFÁCIL
+                        CONCURSOS
                     </a>
                     <div class="nav-toggle">
                         <button class="btn btn-toggle toggle-sidebar">
@@ -84,8 +84,6 @@
                                 </ul>
                             </li>
 
-
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
                                     aria-expanded="false">
@@ -125,14 +123,12 @@
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                         <div>
-                            <h3 class="fw-bold mb-3">Resultados</h3>
-                            <h6 class="op-7 mb-2">Novo resultado</h6>
+                            <h3 class="fw-bold mb-3">CONCURSOS</h3>
+                            <h6 class="op-7 mb-2">Registrar novo concurso</h6>
                         </div>
                         <div class="ms-md-auto py-2 py-md-0">
                             <button type="button" class="btn btn-primary btn-round" data-toggle="modal"
-                                data-target="#gerar">Gerador</button>
-                            <button type="button" class="btn btn-primary btn-round" data-toggle="modal"
-                                data-target="#result">Novo</button>
+                                data-target="#concurso">Novo</button>
                         </div>
                     </div>
 
@@ -169,76 +165,22 @@
                                             <table class="table table-striped mt-3">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col" style="width: 50px">#</th>
-                                                        <th scope="col">Números</th>
+                                                        <th style="width: 40px;">cod</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            {{ $data->id }}
-                                                        </td>
 
-                                                        <td>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n01 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n02 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n03 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n04 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n05 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n06 }}</button>
-
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n07 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n08 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n09 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n10 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n11 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n12 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n13 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n14 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n15 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n16 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n17 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n18 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n19 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n20 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n21 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n22 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n23 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n24 }}</button>
-                                                            <button
-                                                                class="btn btn-sm btn-success">{{ $data->n25 }}</button>
-
-                                                        </td>
-                                                        <td>
-                                                            <a
-                                                                href="{{ route('lotofacil.result.destroy', [$data->id]) }}">
-                                                                <span class="badge badge-danger">Deletar</span> </a>
-                                                        </td>
-                                                    </tr>
+                                                    @foreach ($data as $item)
+                                                        <tr>
+                                                            <td>
+                                                                {{ $item->cod }}
+                                                            </td>
+                                                            <td>
+                                                                <a href="{{ route('admin.pages.concurso.destroy', [$item->id]) }}">
+                                                                    <span class="badge badge-danger">Deletar</span> </a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
 

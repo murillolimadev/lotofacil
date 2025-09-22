@@ -14,7 +14,7 @@ class Resultcontrollerr extends Controller
      */
     public function index()
     {
-        $data =  Result::orderBy('created_at', 'desc')->first();
+        $data =  Result::latest()->get();
         return view('admin.pages.result.index',compact('data'));
     }
 

@@ -161,12 +161,11 @@
 <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <form action="{{ route('admin.lotofacil.store') }}" method="post">
+        <form action="{{ route('admin.lotofacil.result.store') }}" method="post">
             @csrf
-
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Registrar resultado</h5>
+                    <h5 class="modal-title">Registrar</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

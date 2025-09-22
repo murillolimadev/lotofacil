@@ -174,14 +174,9 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-{{-- @if ()
-$usuario->cursos()->count(); 
-@endif --}}
+
                                                     @foreach ($data as $item)
                                                         <tr>
-                                                            <td>
-                                                                {{ $item->cod }}
-                                                            </td>
                                                             <td>
                                                                 @if ($item->n01 == $result->n01)
                                                                     <button

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Concurso;
 use App\Models\Lotofacil;
 use Illuminate\Http\Request;
 

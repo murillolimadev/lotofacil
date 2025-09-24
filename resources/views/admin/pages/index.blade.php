@@ -125,7 +125,7 @@
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                         <div>
-                            <h3 class="fw-bold mb-3">Dashboard</h3>
+                            <h3 class="fw-bold mb-3">LOTOFÁCIL</h3>
                             <h6 class="op-7 mb-2">Registro de jogos lotofácil</h6>
                         </div>
                         <div class="ms-md-auto py-2 py-md-0">
@@ -170,63 +170,120 @@
                                                 <thead>
                                                     <tr>
                                                         <th style="width: 40px;">cod</th>
-                                                        <th scope="col">Acertos</th>
+                                                        <th scope="col">Lotofácil</th>
+                                                        <th>Acertos</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
 
                                                     @foreach ($data as $item)
                                                         <tr>
-                                                            <td>
-                                                                @if ($item->n01 == $result->n01)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n01 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n01 ?? $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n02 == $result->n02)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n02 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n02 ?? $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n03 == $result->n03)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n03 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n03 ?? $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n04 == $result->n04)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n04 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n04 ?? $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n05 == $result->n05)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n05 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $result->n05 ?? $result->n06 }}</button>
-                                                                @endif
-
-                                                                @if ($item->n06 == $result->n06)
-                                                                    <button
-                                                                        class="btn btn-sm btn-success">{{ $item->n06 ?? $result->n06 }}</button>
-                                                                @else
-                                                                    <button
-                                                                        class="btn btn-sm btn-danger">{{ $item->n06 ?? $result->n06 }}</button>
-                                                                @endif
+                                                            <td style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"Ï>
+                                                                {{ $item->cod }}
                                                             </td>
-                                                            <td>
+                                                            <td style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                                                {{ $item->n01 }}
+                                                                {{ $item->n02 }}
+                                                                {{ $item->n03 }}
+                                                                {{ $item->n04 }}
+                                                                {{ $item->n05 }}
+                                                                {{ $item->n06 }}
+                                                                {{ $item->n07 }}
+                                                                {{ $item->n08 }}
+                                                                {{ $item->n09 }}
+                                                                {{ $item->n10 }}
+                                                                {{ $item->n11 }}
+                                                                {{ $item->n12 }}
+                                                                {{ $item->n13 }}
+                                                                {{ $item->n14 }}
+                                                                {{ $item->n15 }}
+                                                                {{ $item->n16 }}
+                                                                {{ $item->n17 }}
+                                                                {{ $item->n18 }}
+                                                                {{ $item->n19 }}
+                                                                {{ $item->n20 }}
+                                                                {{ $item->n21 }}
+                                                                {{ $item->n22 }}
+                                                                {{ $item->n23 }}
+                                                                {{ $item->n24 }}
+                                                                {{ $item->n25 }}
+                                                            </td>
+                                                            <td style="color: teal; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                                                @if ($item->n01 == $result->n01)
+                                                                    {{ $item->n01 }}
+                                                                @endif
+                                                                @if ($item->n02 == $result->n02)
+                                                                    {{ $item->n02 }}
+                                                                @endif
+                                                                @if ($item->n03 == $result->n03)
+                                                                    {{ $item->n03 }}
+                                                                @endif
+                                                                @if ($item->n04 == $result->n04)
+                                                                    {{ $item->n04 }}
+                                                                @endif
+                                                                @if ($item->n05 == $result->n05)
+                                                                    {{ $item->n05 }}
+                                                                @endif
+                                                                @if ($item->n06 == $result->n06)
+                                                                    {{ $item->n06 }}
+                                                                @endif
+                                                                @if ($item->n07 == $result->n07)
+                                                                    {{ $item->n07 }}
+                                                                @endif
+                                                                @if ($item->n08 == $result->n08)
+                                                                    {{ $item->n08 }}
+                                                                @endif
+                                                                @if ($item->n09 == $result->n09)
+                                                                    {{ $item->n09 }}
+                                                                @endif
+                                                                @if ($item->n10 == $result->n10)
+                                                                    {{ $item->n10 }}
+                                                                @endif
+                                                                @if ($item->n11 == $result->n11)
+                                                                    {{ $item->n11 }}
+                                                                @endif
+                                                                @if ($item->n12 == $result->n12)
+                                                                    {{ $item->n12 }}
+                                                                @endif
+                                                                @if ($item->n13 == $result->n13)
+                                                                    {{ $item->n13 }}
+                                                                @endif
+                                                                @if ($item->n14 == $result->n14)
+                                                                    {{ $item->n14 }}
+                                                                @endif
+                                                                @if ($item->n15 == $result->n15)
+                                                                    {{ $item->n15 }}
+                                                                @endif
+                                                                @if ($item->n16 == $result->n16)
+                                                                    {{ $item->n16 }}
+                                                                @endif
+                                                                @if ($item->n17 == $result->n17)
+                                                                    {{ $item->n17 }}
+                                                                @endif
+                                                                @if ($item->n18 == $result->n18)
+                                                                    {{ $item->n18 }}
+                                                                @endif
+                                                                @if ($item->n19 == $result->n19)
+                                                                    {{ $item->n19 }}
+                                                                @endif
+                                                                @if ($item->n20 == $result->n20)
+                                                                    {{ $item->n20 }}
+                                                                @endif
+                                                                @if ($item->n21 == $result->n21)
+                                                                    {{ $item->n21 }}
+                                                                @endif
+                                                                @if ($item->n22 == $result->n22)
+                                                                    {{ $item->n22 }}
+                                                                @endif
+                                                                @if ($item->n23 == $result->n23)
+                                                                    {{ $item->n23 }}
+                                                                @endif
+                                                                @if ($item->n24 == $result->n24)
+                                                                    {{ $item->n24 }}
+                                                                @endif
+                                                                @if ($item->n25 == $result->n25)
+                                                                    {{ $item->n25 }}
+                                                                @endif
 
                                                             </td>
                                                             <td>

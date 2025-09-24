@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/lotofacil/concurso/store', [ConcursoController::class, 'store'])->name('admin.pages.concurso.store');
     Route::get('/concurso/destroy/{id}', [ConcursoController::class, 'destroy'])->name('admin.pages.concurso.destroy');
 
-    //insert
+    //insert lotofacil
     Route::get('/lotofacil', [LotofacilController::class, 'index'])->name('lotofacil.index');
     Route::post('/lotofacil/store', [LotofacilController::class, 'store'])->name('admin.lotofacil.store');
     Route::get('/lotofacil/destroy/{id}', [LotofacilController::class, 'destroy'])->name('lotofacil.destroy');

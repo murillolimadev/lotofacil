@@ -8,7 +8,7 @@
                 <!-- Logo Header -->
                 <div class="logo-header" data-background-color="dark">
                     <a href="index.html" class="logo" style="color: #FFF">
-                        CONCURSOS
+                        LOTOFÁCIL
                     </a>
                     <div class="nav-toggle">
                         <button class="btn btn-toggle toggle-sidebar">
@@ -176,7 +176,8 @@
                                                                 {{ $item->cod }}
                                                             </td>
                                                             <td>
-                                                                <a href="{{ route('admin.pages.concurso.destroy', [$item->id]) }}">
+                                                                <a
+                                                                    href="{{ route('admin.pages.concurso.destroy', [$item->id]) }}">
                                                                     <span class="badge badge-danger">Deletar</span> </a>
                                                             </td>
                                                         </tr>
@@ -197,7 +198,5 @@
 
             @include('admin.layout.footer')
         </div>
-
-
     </div>
 @endsection

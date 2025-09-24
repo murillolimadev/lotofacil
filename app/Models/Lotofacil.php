@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Lotofacil extends Model
 {
     use HasFactory;
+
 
     protected $fillable = [
         'cod',
@@ -37,4 +40,9 @@ class Lotofacil extends Model
         'n24',
         'n25',
     ];
+
+    public function concurso()
+    {
+        return $this->hasMany(Concurso::class, 'cod', 'cod');
+    }
 }

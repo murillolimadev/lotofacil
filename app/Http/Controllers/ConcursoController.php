@@ -13,7 +13,8 @@ class ConcursoController extends Controller
     public function index()
     {
         $data = Concurso::latest()->get();
-        return view('admin.pages.concurso.index', compact('data'));
+        $conc = Concurso::latest()->get();
+        return view('admin.pages.concurso.index', compact('data', 'conc'));
     }
 
     /**

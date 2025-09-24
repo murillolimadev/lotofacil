@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Concurso;
 use App\Models\Lotofacil;
 use App\Models\Result;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class Resultcontrollerr extends Controller
     public function index()
     {
         $data =  Result::latest()->get();
-        return view('admin.pages.result.index',compact('data'));
+        $conc = Concurso::latest()->get();
+        return view('admin.pages.result.index',compact('data','conc'));
     }
 
     /**

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Concurso;
 use App\Models\Lotofacil;
 use App\Models\Result;
 
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\AssignOp\Concat;
 
 class Dashboard extends Controller
 {
@@ -16,9 +18,11 @@ class Dashboard extends Controller
     public function index()
     {
         $result =  Result::orderBy('created_at', 'desc')->first();
-        $data = Lotofacil::latest()->orderBy('created_at', 'desc')->get();
-       
-        return view('admin.pages.index', compact('data', 'result'));
+        $data = Lotofacil::latest()->get();
+        $conc = Concurso::latest()->get();
+
+        // dd(Concurso::first()->lotofacil);
+        return view('admin.pages.index', compact('data', 'result', 'conc'));
     }
 
     /**

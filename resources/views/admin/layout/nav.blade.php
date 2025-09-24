@@ -8,7 +8,7 @@
     <li class="nav-item">
         <a href="{{ route('dashboard.index') }}">
             <i class="fas fa-desktop"></i>
-            <p>Home</p>
+            <p>Lotofácil</p>
             {{-- <span class="caret"></span> --}}
         </a>
     </li>

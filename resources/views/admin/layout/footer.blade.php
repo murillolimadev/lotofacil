@@ -26,10 +26,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-
+                            <label for="COD">CONCURSO</label>
+                            <select name="cod" class="form-control">
+                                @foreach ($conc as $item)
+                                    <option value="{{ $item->cod }}">{{ $item->cod }}</option>
+                                @endforeach
+                            </select>
                             <div class="num">
-                                <label for="COD">COD</label>
-                                <input type="text" name="cod"> <br>
                                 <div class="cicle">
                                     <input type="checkbox" value="01" name="n01"> 01
                                 </div>

@@ -51,6 +51,7 @@
     {{-- modal --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
 </head>
 
 <body>
@@ -63,6 +64,9 @@
     <script src="{{ asset('admin/js/core/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('admin/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('admin/js/core/bootstrap.min.js') }}"></script>
+    {{-- jquery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
     <!-- jQuery Scrollbar -->
     <script src="{{ asset('admin/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>

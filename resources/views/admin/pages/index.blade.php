@@ -161,7 +161,6 @@
                                                     </div>
                                                 </div>
                                             @endif
-
                                         </div>
                                     </div>
                                     <div class="row">
@@ -172,16 +171,19 @@
                                                         <th style="width: 40px;">cod</th>
                                                         <th scope="col">Lotofácil</th>
                                                         <th>Acertos</th>
+                                                        <th>Total</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
 
                                                     @foreach ($data as $item)
                                                         <tr>
-                                                            <td style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"Ï>
+                                                            <td
+                                                                style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"Ï>
                                                                 {{ $item->cod }}
                                                             </td>
-                                                            <td style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                                            <td
+                                                                style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                                                                 {{ $item->n01 }}
                                                                 {{ $item->n02 }}
                                                                 {{ $item->n03 }}
@@ -208,7 +210,8 @@
                                                                 {{ $item->n24 }}
                                                                 {{ $item->n25 }}
                                                             </td>
-                                                            <td style="color: teal; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                                            <td
+                                                                style="color: teal; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                                                                 @if ($item->n01 == $result->n01)
                                                                     {{ $item->n01 }}
                                                                 @endif
@@ -285,6 +288,89 @@
                                                                     {{ $item->n25 }}
                                                                 @endif
 
+                                                            </td>
+                                                            <td>
+                                                                <?php
+                                                                $total = 0;
+                                                                if ($item->n01 == $result->n01) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n02 == $result->n02) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n03 == $result->n03) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n04 == $result->n04) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n05 == $result->n05) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n06 == $result->n06) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n07 == $result->n07) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n08 == $result->n08) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n09 == $result->n09) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n10 == $result->n10) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n11 == $result->n11) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n12 == $result->n12) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n13 == $result->n13) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n14 == $result->n14) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n15 == $result->n15) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n16 == $result->n16) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n17 == $result->n17) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n18 == $result->n18) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n19 == $result->n19) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n20 == $result->n20) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n21 == $result->n21) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n22 == $result->n22) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n23 == $result->n23) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n24 == $result->n24) {
+                                                                    $total++;
+                                                                }
+                                                                if ($item->n25 == $result->n25) {
+                                                                    $total++;
+                                                                }
+                                                               
+
+                                                                echo $total;
+                                                                ?>
                                                             </td>
                                                             <td>
                                                                 <a href="{{ route('lotofacil.destroy', [$item->id]) }}">

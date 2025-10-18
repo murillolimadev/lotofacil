@@ -290,7 +290,7 @@
 
                                                             </td>
                                                             <td>
-                                                                
+                                                                {{ $total }}
                                                             </td>
                                                             <td>
                                                                 <a href="{{ route('lotofacil.destroy', [$item->id]) }}">

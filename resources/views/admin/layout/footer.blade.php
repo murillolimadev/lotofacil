@@ -28,9 +28,9 @@
                         <div class="col-md-12">
                             <label for="COD">CONCURSO</label>
                             <select name="cod" class="form-control">
-                                @foreach ($conc as $item)
+                                {{-- @foreach ($conc as $item)
                                     <option value="{{ $item->cod }}">{{ $item->cod }}</option>
-                                @endforeach
+                                @endforeach --}}
                             </select>
                             <div class="num">
                                 <div class="cicle">

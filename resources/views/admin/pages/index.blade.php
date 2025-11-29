@@ -184,6 +184,7 @@
                                                             </td>
                                                             <td
                                                                 style="color: tomato; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+
                                                                 {{ $item->n01 }}
                                                                 {{ $item->n02 }}
                                                                 {{ $item->n03 }}
@@ -192,7 +193,7 @@
                                                                 {{ $item->n06 }}
                                                                 {{ $item->n07 }}
                                                                 {{ $item->n08 }}
-                                                                {{ $item->n09 }}
+                                                                {{ $item->n08 }}
                                                                 {{ $item->n10 }}
                                                                 {{ $item->n11 }}
                                                                 {{ $item->n12 }}
@@ -209,6 +210,7 @@
                                                                 {{ $item->n23 }}
                                                                 {{ $item->n24 }}
                                                                 {{ $item->n25 }}
+
                                                             </td>
                                                             <td
                                                                 style="color: teal; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
@@ -242,55 +244,8 @@
                                                                 @if ($item->n10 == $result->n10)
                                                                     {{ $item->n10 }}
                                                                 @endif
-                                                                @if ($item->n11 == $result->n11)
-                                                                    {{ $item->n11 }}
-                                                                @endif
-                                                                @if ($item->n12 == $result->n12)
-                                                                    {{ $item->n12 }}
-                                                                @endif
-                                                                @if ($item->n13 == $result->n13)
-                                                                    {{ $item->n13 }}
-                                                                @endif
-                                                                @if ($item->n14 == $result->n14)
-                                                                    {{ $item->n14 }}
-                                                                @endif
-                                                                @if ($item->n15 == $result->n15)
-                                                                    {{ $item->n15 }}
-                                                                @endif
-                                                                @if ($item->n16 == $result->n16)
-                                                                    {{ $item->n16 }}
-                                                                @endif
-                                                                @if ($item->n17 == $result->n17)
-                                                                    {{ $item->n17 }}
-                                                                @endif
-                                                                @if ($item->n18 == $result->n18)
-                                                                    {{ $item->n18 }}
-                                                                @endif
-                                                                @if ($item->n19 == $result->n19)
-                                                                    {{ $item->n19 }}
-                                                                @endif
-                                                                @if ($item->n20 == $result->n20)
-                                                                    {{ $item->n20 }}
-                                                                @endif
-                                                                @if ($item->n21 == $result->n21)
-                                                                    {{ $item->n21 }}
-                                                                @endif
-                                                                @if ($item->n22 == $result->n22)
-                                                                    {{ $item->n22 }}
-                                                                @endif
-                                                                @if ($item->n23 == $result->n23)
-                                                                    {{ $item->n23 }}
-                                                                @endif
-                                                                @if ($item->n24 == $result->n24)
-                                                                    {{ $item->n24 }}
-                                                                @endif
-                                                                @if ($item->n25 == $result->n25)
-                                                                    {{ $item->n25 }}
-                                                                @endif
-
-                                                            </td>
                                                             <td>
-                                                                {{ $total }}
+                                                                00
                                                             </td>
                                                             <td>
                                                                 <a href="{{ route('lotofacil.destroy', [$item->id]) }}">
